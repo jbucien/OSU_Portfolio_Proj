@@ -1,9 +1,9 @@
 # OSU_Portfolio_Proj
-Collection of final portfolio projects from the classes I've taken at Oregon State University's Computer Science bachelors degree program.
+Collection of final portfolio projects from the classes I've taken at Oregon State University's Computer Science bachelor's degree program.
 
 ## Exercise Tracker Web App
 
-*Full stack MERN single page application that tracks a user's exercises. A user can interact with a REST API via a UI to perform CRUD operations on exercise data. Data includes exercise type, number of repetitions, and date of completion, *
+*Full stack MERN single page application that tracks a user's exercises. A user can interact with a REST API via a UI to perform CRUD operations on exercise data. Data includes exercise type, number of repetitions, and date of completion.*
 
 **Completion Date**: *in progress*; expected completion March 2022
 
@@ -19,7 +19,7 @@ Collection of final portfolio projects from the classes I've taken at Oregon Sta
 
 **Language/Technologies**: Python
 
-**Class**: CS 261 Data Structures: *
+**Class**: CS 261 Data Structures
 
 ## MASM Low-level I/O Procedures 
 
@@ -39,11 +39,11 @@ Collection of final portfolio projects from the classes I've taken at Oregon Sta
 
 **Language/Technologies**: Python
 
-**Class**: CS 162 Introduction to Computer Science II: *
+**Class**: CS 162 Introduction to Computer Science II
 
-## *Langton's Ant*
+## Langton's Ant
 
-*A simulation of Langton's Ant, where a user inputs the number of rows/columns in the matrix, the ant's starting position/direction, and the number of steps to be carried out. The program runs the simulation and displays the board to the console.*
+*A simulation of Langton's Ant, where a user inputs: a desired number of matrix rows/columns, the ant's starting position/direction, and the number of steps to be carried out. The program runs the simulation and displays the resulting board to the console.*
 
 **Completion Date**: August 2021
 
