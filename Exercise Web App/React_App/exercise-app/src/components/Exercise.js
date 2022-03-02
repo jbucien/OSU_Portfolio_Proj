@@ -1,8 +1,7 @@
 import React from 'react';
-import { RiDeleteBin6Line } from 'react-icons/ri';
-import { RiEdit2Line } from 'react-icons/ri';
+import { RiDeleteBin6Line, RiEdit2Line } from 'react-icons/ri';
 
-function Exercise({exercise, onDelete}) {
+function Exercise({exercise, onDelete, onEdit}) {
     return (
         <tr>
             <td>{exercise.name}</td>
@@ -10,8 +9,16 @@ function Exercise({exercise, onDelete}) {
             <td>{exercise.weight}</td>
             <td>{exercise.unit}</td>
             <td>{exercise.date}</td>
-            <td><RiEdit2Line/></td>
-            <td><RiDeleteBin6Line onClick={ () => onDelete(exercise._id)}/></td>
+            <td>
+                <button class ="table-icons">
+                <RiEdit2Line onClick={ () => onEdit(exercise)}/>
+                </button>
+            </td>
+            <td>
+                <button class ="table-icons">
+                    <RiDeleteBin6Line onClick={ () => onDelete(exercise._id)}/>
+                </button>
+            </td>
         </tr>
     );
 }
