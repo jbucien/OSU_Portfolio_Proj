@@ -28,7 +28,6 @@ app.get('/exercises', (req, res) => {
             console.log("Exercise(s) retrieved.")
             res.set({'Content-Type': 'application/json'});
             res.status(200).json(exercises);
-            console.log("Exercises retrieved.");
         })
         .catch(error => {
             console.error(error);
