@@ -1,10 +1,12 @@
 // Get the mongoose object
 import { query } from 'express';
 import mongoose from 'mongoose';
+import { mongoString } from './password.js';
+
 
 // Prepare the database "exercises" in the MongoDB Cloud server
 mongoose.connect(
-    "mongoString",
+    `${mongoString}`,
     {useNewUrlParser: true}
 );
 
