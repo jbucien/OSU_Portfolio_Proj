@@ -18,12 +18,14 @@ function App() {
       <Router>
         <body>
           <header className="App-header">
-            <h1 className="App-title">
-            <GiWeightLiftingUp />
-              Exercise Tracker
-              <GiWeightLiftingUp />
-            </h1>
-            <p className="App-description">Keep track of your gains!</p>
+            <div className="App-title-box">
+              <h1 className="App-title">
+                <GiWeightLiftingUp />
+                Exercise Tracker
+                <GiWeightLiftingUp />
+              </h1>
+              <p className="App-description">Keep track of your gains!</p>
+            </div>
             <Navigation />
           </header>
           <main>

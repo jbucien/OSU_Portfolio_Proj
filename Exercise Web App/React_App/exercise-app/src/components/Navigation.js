@@ -5,7 +5,7 @@ function Navigation() {
     return (
         <nav>
             <ul>
-                <li><Link to="/">Home</Link></li>
+                <li id="home-button"><Link to="/">Home</Link></li>
                 <li><Link to="/create-exercise">Create Entry</Link></li>
             </ul>
         </nav>

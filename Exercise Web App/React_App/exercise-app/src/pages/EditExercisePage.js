@@ -27,7 +27,7 @@ export const EditExercisePage = ({exerciseToEdit}) => {
 
     return (
         <article class="page-content">
-            <h1>Edit Exercise</h1>
+            <h2>Edit Exercise</h2>
             <input
                 type="text"
                 value={name}
