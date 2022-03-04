@@ -42,7 +42,7 @@ function App() {
               </div>
           </main>
           <footer>
-              <p>Jenna Bucien &copy; 2022</p>
+              <p> &copy; 2022 Jenna Bucien</p>
             </footer>
         </body>
       </Router>      

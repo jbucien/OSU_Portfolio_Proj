@@ -1,6 +1,6 @@
 import ExerciseList from '../components/ExerciseList';
 import { useState, useEffect } from 'react';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function HomePage({setExerciseToEdit}) {
 

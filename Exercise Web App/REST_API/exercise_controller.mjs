@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 /**CREATE a new exercise entry*/
-app.post("/exercises", (req, res) => {
+app.post('/exercises', (req, res) => {
     exercises.createExercise(req.body.name, req.body.reps, req.body.weight, req.body.unit, req.body.date)
         .then(exercise => {
             console.log('New exercise created.');
@@ -25,7 +25,7 @@ app.post("/exercises", (req, res) => {
 app.get('/exercises', (req, res) => {
     exercises.retrieveExercises()
         .then(exercises => {
-            console.log("Exercise(s) retrieved.")
+            console.log('Exercise(s) retrieved.')
             res.set({'Content-Type': 'application/json'});
             res.status(200).json(exercises);
         })
@@ -67,7 +67,7 @@ app.delete('/exercises/:_id', (req, res) => {
       })
       .catch(error => {
         console.error(error);
-        res.status(500).send({error: 'Request failed'});
+        res.status(500).send({Error: 'Request failed'});
       });
   });
 

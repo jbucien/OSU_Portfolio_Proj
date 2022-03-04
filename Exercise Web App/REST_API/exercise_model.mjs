@@ -1,12 +1,12 @@
 // Get the mongoose object
 import { query } from 'express';
 import mongoose from 'mongoose';
-import { mongoString } from './password.js';
+import { cloudString } from './cloud.js';
 
 
 // Prepare the database "exercises" in the MongoDB Cloud server
 mongoose.connect(
-    `${mongoString}`,
+    `${cloudString}`,
     {useNewUrlParser: true}
 );
 
@@ -66,9 +66,14 @@ const retrieveExercises = async () => {
  * @returns a promise. Resolves to the number of documents modified
  */
 const updateExercise = async(_id, name, reps, weight, unit, date) => {
-    const result = await Exercise.replaceOne({_id: _id}, {name: name, reps: reps, weight: weight, unit: unit, date: date });
-    return result.modifiedCount;
-}
+    const queryParams = [name, reps, weight, unit, date];
+    if(queryParams.includes("") || queryParams.includes(null)) {
+        throw err;
+    } else {
+        const result = await Exercise.replaceOne({_id: _id}, {name: name, reps: reps, weight: weight, unit: unit, date: date });
+        return result.modifiedCount;
+    };
+};
 
 /**DELETE - Deletes a exercise entry with the matching _id
  * @param {String} _id
