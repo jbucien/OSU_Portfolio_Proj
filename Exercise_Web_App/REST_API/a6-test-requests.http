@@ -1,0 +1,86 @@
+### Create an exercise
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Squat",
+    "reps": 10,
+    "weight": 30,
+    "unit": "lbs",
+    "date": "01-18-22"
+}
+
+### Create another exercise
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Deadlift",
+    "reps": 10,
+    "weight": 30,
+    "unit": "lbs",
+    "date": "01-25-22"
+}
+
+### Create another exercise
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Chest Press",
+    "reps": 12,
+    "weight": 45,
+    "unit": "lbs",
+    "date": "03-01-22"
+}
+
+### Create another exercise
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Shoulder Press",
+    "reps": 15,
+    "weight": 25,
+    "unit": "lbs",
+    "date": "02-28-22"
+}
+
+### Create another exercise
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Lat Pulldown",
+    "reps": 16,
+    "weight": 65,
+    "unit": "lbs",
+    "date": "02-16-22"
+}
+### Retrieve should return the 2 exercises we just created
+GET http://localhost:3000/exercises HTTP/1.1
+
+
+### Edit the Deadlift. 
+### NOTE: Set ID to the ID for Deadlift
+PUT http://localhost:3000/exercises/6221157130462e2f0262aca4 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Hi",
+    "reps": null,
+    "weight": 50,
+    "unit": "kgs",
+    "date": "01-25-22"
+}
+
+### Verify that reps value for Deadlift is now 25 and the unit is now kgs.
+GET http://localhost:3000/exercises HTTP/1.1
+
+
+### Delete the Deadlift
+### NOTE: Set ID to the ID for Deadlift
+DELETE http://localhost:3000/exercises/621fa0923ef50c45b3ff15f4 HTTP/1.1
+
+### Verify that the Deadlift exercise has been deleted
+GET http://localhost:3000/exercises HTTP/1.1
